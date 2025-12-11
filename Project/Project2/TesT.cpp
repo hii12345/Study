@@ -11,6 +11,7 @@ int main() {
 	int* b = &a;
 	cout << a <<"\n";
 	cout << &a << "\n";
+	//sd
 	cout << b << endl;
 
 }
