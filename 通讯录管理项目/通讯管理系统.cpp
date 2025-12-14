@@ -14,7 +14,7 @@ struct Person //人员结构体
 };
 struct Addressbooks //通讯录结构体
 {
-	struct Person  personArrary[Max];
+	struct Person  personArray[Max];
 	int m_Size;
 };
 void addPerson(Addressbooks *abs) {
@@ -23,10 +23,46 @@ void addPerson(Addressbooks *abs) {
 		cout << "通讯录已满" << endl;
 	}
 	else{
+		//用户名
 		string name;
 		cout << "输入用户名" << endl;
 		cin >> name;
-		abs->personArrary[abs->m_Size].m_name = name;
+		abs->personArray[abs->m_Size].m_name = name;
+		//性别
+		int sex = 0;
+		cout << "请输入性别" << endl;
+		cout << "1------男" << endl;
+		cout << "2------女" << endl;
+		while (true) {
+			//如果输入的正常 退出。输入有误继续操作。
+			cin >> sex;
+			if (sex == 1 || sex == 2) {
+				abs->personArray[abs->m_Size].m_Sex = sex;
+				break;
+			}
+			cout << "输入有误 请重新输入" << endl;
+		}
+		//年龄
+		int age;
+		cout << "请输入年龄" << endl;
+		cin >> age;
+		abs->personArray[abs->m_Size].m_age = age;
+		//电话号码
+		int number;
+		cout << "请输入电话号码" << endl;
+		cin >> number;
+		abs->personArray[abs->m_Size].m_phone = number;
+		//地址
+		string address;
+		cout << "请输入地址" << endl;
+		cin >> address;
+		abs->personArray[abs->m_Size].m_addr = address;
+		//更新数组数量
+		abs->m_Size++;
+		cout << "新增通讯录成功" << endl;
+		//清屏
+		system("pause");
+		system("cls");
 	}
 }
 void showmean() {
