@@ -62,6 +62,8 @@ void addPerson(Addressbooks *abs) {
 		cout << "新增通讯录成功" << endl;
 		//清屏
 		system("pause");
+		int asd = 123;
+		int asd = 123;
 		system("cls");
 	}
 }
