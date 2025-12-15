@@ -2,7 +2,8 @@
 using namespace std;
 #include<string>
 #define Max 1000
-
+// 新增：VS编译器强制GBK编码（如果是Dev-C++可跳过这行）
+#pragma execution_character_set("gbk")
 
 struct Person //人员结构体
 {
@@ -17,7 +18,8 @@ struct Addressbooks //通讯录结构体
 	struct Person  personArray[Max];
 	int m_Size;
 };
-void addPerson(Addressbooks *abs) {
+void addPerson(Addressbooks *abs) //添加联系人
+{
 	//1.判断通讯录是否满
 	if (abs->m_Size == Max) {
 		cout << "通讯录已满" << endl;
@@ -37,7 +39,15 @@ void addPerson(Addressbooks *abs) {
 			//如果输入的正常 退出。输入有误继续操作。
 			cin >> sex;
 			if (sex == 1 || sex == 2) {
-				abs->personArray[abs->m_Size].m_Sex = sex;
+				//abs->personArray[abs->m_Size].m_Sex = sex;
+				if (sex ==1) {
+					string cn_sex = "男";
+					to_string(abs->personArray[abs->m_Size].m_Sex) = cn_sex;
+				}
+				else if (sex == 2) {
+					string cn_sex = "女";
+					to_string(abs->personArray[abs->m_Size].m_Sex) = cn_sex;
+				}
 				break;
 			}
 			cout << "输入有误 请重新输入" << endl;
@@ -48,7 +58,7 @@ void addPerson(Addressbooks *abs) {
 		cin >> age;
 		abs->personArray[abs->m_Size].m_age = age;
 		//电话号码
-		int number;
+		string number;
 		cout << "请输入电话号码" << endl;
 		cin >> number;
 		abs->personArray[abs->m_Size].m_phone = number;
@@ -62,10 +72,44 @@ void addPerson(Addressbooks *abs) {
 		cout << "新增通讯录成功" << endl;
 		//清屏
 		system("pause");
-		int asd = 123;
-		int asd = 123;
 		system("cls");
 	}
+}
+
+//显示联系人
+void showperson(Addressbooks *abs) 
+{
+	//判断通讯录中人数是否为0，为0 提示记录为空
+	//如果不为0 显示记录的联系人
+	if (abs->m_Size==0) {
+		cout << "当前联系人为空" << endl;
+	}
+	else {
+		for (int i = 0;  i < abs->m_Size;i++) {
+			cout << "姓名：" << abs->personArray[i].m_name << "\t";
+			cout << "性别：" << (abs->personArray[i].m_Sex == 1?"男":"女") << "\t";
+			//cout << "性别：" << (abs->personArray[i].m_Sex == 1?"男":"女") << "\t";
+			cout << "年龄：" << abs->personArray[i].m_age << "\t";
+			cout << "电话：" << abs->personArray[i].m_phone << "\t";
+			cout << "地址：" << abs->personArray[i].m_addr << endl;
+		}
+	}
+	//清屏
+	system("pause");
+	system("cls");
+}
+//删除联系人
+
+int deleteperson(Addressbooks* abs,string name) {
+	//检查联系人是否存在，若存在返回联系人所存在的数据编号
+	//不存在返回 -1
+	//1.遍历你所有的数组中的人名，与输入的string name 相匹配 表示存在 不相符表示不存在
+	for (int i = 0; i < abs->m_Size;i++) {
+		if (abs->personArray[i].m_name == name) {
+			return i;
+		}
+	}
+	return -1;
 }
 void showmean() {
 	cout << "1.添加联系人" << endl;
@@ -77,6 +121,7 @@ void showmean() {
 	cout << "0.退出" << endl;
 }
 int main() {
+
 	int select = 0;
 	//创建一个通讯录的结构体变量
 	Addressbooks abs;
@@ -92,6 +137,7 @@ int main() {
 			addPerson(&abs);//利用地址传递 修饰实参
 			break;
 		case 2:
+			showperson(&abs);
 			break;
 		case 3:
 			break;
