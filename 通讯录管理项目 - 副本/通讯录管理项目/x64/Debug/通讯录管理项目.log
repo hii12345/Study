@@ -1,3 +1,0 @@
-﻿  通讯管理系统.cpp
-E:\visualstudio\通讯录管理项目\通讯管理系统.cpp(6,9): warning C4695: #pragma execution_character_set: 'gbk' 不是受支持的参数: 当前仅支持“UTF-8”
-  通讯录管理项目.vcxproj -> E:\visualstudio\通讯录管理项目\x64\Debug\通讯录管理项目.exe
