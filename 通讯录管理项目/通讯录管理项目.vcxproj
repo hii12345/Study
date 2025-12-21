@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="123.cpp" />
     <ClCompile Include="通讯管理系统.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="通讯管理系统.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

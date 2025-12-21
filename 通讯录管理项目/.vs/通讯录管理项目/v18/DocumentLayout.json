@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{C4C009DD-1814-42FD-B62C-FA9AAAAA8D3D}|\u901A\u8BAF\u5F55\u7BA1\u7406\u9879\u76EE.vcxproj|E:\\visualstudio\\\u901A\u8BAF\u5F55\u7BA1\u7406\u9879\u76EE\\\u901A\u8BAF\u7BA1\u7406\u7CFB\u7EDF.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C4C009DD-1814-42FD-B62C-FA9AAAAA8D3D}|\u901A\u8BAF\u5F55\u7BA1\u7406\u9879\u76EE.vcxproj|solutionrelative:\u901A\u8BAF\u7BA1\u7406\u7CFB\u7EDF.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4C009DD-1814-42FD-B62C-FA9AAAAA8D3D}|\u901A\u8BAF\u5F55\u7BA1\u7406\u9879\u76EE.vcxproj|E:\\visualstudio\\\u901A\u8BAF\u5F55\u7BA1\u7406\u9879\u76EE\\123.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C4C009DD-1814-42FD-B62C-FA9AAAAA8D3D}|\u901A\u8BAF\u5F55\u7BA1\u7406\u9879\u76EE.vcxproj|solutionrelative:123.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 54,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,7 +26,23 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "123.cpp",
+              "DocumentMoniker": "E:\\visualstudio\\\u901A\u8BAF\u5F55\u7BA1\u7406\u9879\u76EE\\123.cpp",
+              "RelativeDocumentMoniker": "123.cpp",
+              "ToolTip": "E:\\visualstudio\\\u901A\u8BAF\u5F55\u7BA1\u7406\u9879\u76EE\\123.cpp",
+              "RelativeToolTip": "123.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-16T15:48:56.544Z"
             },
             {
               "$type": "Document",
@@ -32,7 +52,7 @@
               "RelativeDocumentMoniker": "\u901A\u8BAF\u7BA1\u7406\u7CFB\u7EDF.cpp",
               "ToolTip": "E:\\visualstudio\\\u901A\u8BAF\u5F55\u7BA1\u7406\u9879\u76EE\\\u901A\u8BAF\u7BA1\u7406\u7CFB\u7EDF.cpp",
               "RelativeToolTip": "\u901A\u8BAF\u7BA1\u7406\u7CFB\u7EDF.cpp",
-              "ViewState": "AgIAACoAAAAAAAAAAAAuwEEAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAAACYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-14T19:17:42.429Z",
               "EditorCaption": ""
