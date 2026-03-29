@@ -175,6 +175,7 @@ int main() {
 			break;
 		case 2:
 			showperson(&abs);
+			int a;
 			break;
 		case 3:
 			//cout << "请输入查询的名称" << endl;
