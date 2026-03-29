@@ -14,7 +14,7 @@ struct Person //人员结构体
 	string m_phone;
 	string m_addr;
 };
-struct Addressbooks //通讯录结构体
+struct Addressbooks //通讯录结构体123
 {
 	struct Person  personArray[Max];
 	int m_Size;
