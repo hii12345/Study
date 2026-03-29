@@ -174,7 +174,7 @@ void deleteperson(Addressbooks* abs)
     system("cls");
 }
 
-// 函数功能：显示通讯录管理系统的主菜单
+// 函数功能：显示通讯录管理系统的主菜单sdf
 // 设计思路：纯输出函数，清晰展示所有功能选项，方便用户选择操作
 void showmean()
 {
