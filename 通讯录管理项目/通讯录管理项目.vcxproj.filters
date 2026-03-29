@@ -18,9 +18,6 @@
     <ClCompile Include="通讯管理系统.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="123.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="通讯管理系统.h">

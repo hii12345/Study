@@ -134,7 +134,19 @@ void deleteperson(Addressbooks* abs) {
 	system("pause");
 	system("cls");
 }
-
+void findPerson(Addressbooks* abs) {
+	cout << "请输入查找的联系人" << endl;
+	string name;
+	cin >> name;
+	int ret = isExist(abs, name);
+	if (ret != -1) {
+		showperson(abs);
+	}
+	else
+	{
+		cout << "输入的联系人不存在" << endl;
+	}
+}
 
 void showmean() {
 	cout << "1.添加联系人" << endl;
@@ -177,6 +189,7 @@ int main() {
 			deleteperson(&abs);
 			break;
 		case 4:
+			findPerson(&abs);
 			break;
 		case 5:
 			break;
@@ -186,6 +199,11 @@ int main() {
 			cout << "已退出" << "\n";
 			system("pause");
 			return 0;
+			break;
+		default: // 输入非法序号
+			cout << "输入序号有误，请重新输入！" << endl;
+			system("pause");
+			system("cls");
 			break;
 		}
 	}
