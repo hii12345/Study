@@ -9,7 +9,7 @@ using namespace std;
 struct Person //人员结构体
 {
 	string m_name;
-	int m_Sex;  //1 男。2 女
+	int m_Sex;  //1 男。2 女1222
 	int m_age;
 	string m_phone;
 	string m_addr;
