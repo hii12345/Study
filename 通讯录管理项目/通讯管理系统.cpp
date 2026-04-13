@@ -42,12 +42,12 @@ void addPerson(Addressbooks* abs) //添加联系人
 			if (sex == 1 || sex == 2) {
 				//abs->personArray[abs->m_Size].m_Sex = sex;
 				if (sex == 1) {
-					string cn_sex = "男";
-					to_string(abs->personArray[abs->m_Size].m_Sex) = cn_sex;
+					
+					to_string(abs->personArray[abs->m_Size].m_Sex) = sex;
 				}
 				else if (sex == 2) {
-					string cn_sex = "女";
-					to_string(abs->personArray[abs->m_Size].m_Sex) = cn_sex;
+					
+					to_string(abs->personArray[abs->m_Size].m_Sex) = sex;
 				}
 				break;
 			}
@@ -147,6 +147,62 @@ void findPerson(Addressbooks* abs) {
 		cout << "输入的联系人不存在" << endl;
 	}
 }
+void modifyPerson(Addressbooks* abs) {
+	cout << "请输入修改的联系人" << endl;
+	string name;
+	cin >> name;
+	int ret = isExist(abs, name);
+	if (ret != -1) {
+		string name;
+		cout << "输入用户名" << endl;
+		cin >> name;
+		abs->personArray[ret].m_name = name;
+		//性别
+		int sex = 0;
+		cout << "请输入性别" << endl;
+		cout << "1------男" << endl;
+		cout << "2------女" << endl;
+		while (true) {
+			//如果输入的正常 退出。输入有误继续操作。
+			cin >> sex;
+			if (sex == 1 || sex == 2) {
+				//abs->personArray[ret].m_Sex = sex;
+				if (sex == 1) {
+					string cn_sex = "男";
+					to_string(abs->personArray[ret].m_Sex) = cn_sex;
+				}
+				else if (sex == 2) {
+					string cn_sex = "女";
+					to_string(abs->personArray[ret].m_Sex) = cn_sex;
+				}
+				break;
+			}
+			cout << "输入有误 请重新输入" << endl;
+		}
+		//年龄
+		int age;
+		cout << "请输入年龄" << endl;
+		cin >> age;
+		abs->personArray[ret].m_age = age;
+		//电话号码
+		string number;
+		cout << "请输入电话号码" << endl;
+		cin >> number;
+		abs->personArray[ret].m_phone = number;
+		//地址
+		string address;
+		cout << "请输入地址" << endl;
+		cin >> address;
+		abs->personArray[ret].m_addr = address;
+	}
+	else
+	{
+		cout << "查无此人" << endl;
+	}
+	//清屏
+	system("pause");
+	system("cls");
+	}
 
 void showmean() {
 	cout << "1.添加联系人" << endl;
@@ -193,6 +249,7 @@ int main() {
 			findPerson(&abs);
 			break;
 		case 5:
+			modifyPerson(&abs);
 			break;
 		case 6:
 			break;
